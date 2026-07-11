@@ -1,0 +1,55 @@
+{
+  "name": "Expense",
+  "type": "object",
+  "properties": {
+    "title": {
+      "type": "string"
+    },
+    "amount": {
+      "type": "number"
+    },
+    "currency": {
+      "type": "string",
+      "default": "RWF"
+    },
+    "category": {
+      "type": "string",
+      "enum": [
+        "rent",
+        "utilities",
+        "supplies",
+        "travel",
+        "salaries",
+        "marketing",
+        "maintenance",
+        "other"
+      ],
+      "default": "other"
+    },
+    "expense_date": {
+      "type": "string",
+      "format": "date"
+    },
+    "receipt_url": {
+      "type": "string"
+    },
+    "paid_by": {
+      "type": "string"
+    },
+    "payment_method": {
+      "type": "string"
+    },
+    "notes": {
+      "type": "string"
+    },
+    "branch_id": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "title",
+    "amount",
+    "category",
+    "expense_date"
+  ]
+}

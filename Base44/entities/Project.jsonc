@@ -1,0 +1,62 @@
+{
+  "name": "Project",
+  "type": "object",
+  "properties": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "planning",
+        "in_progress",
+        "completed",
+        "on_hold"
+      ],
+      "default": "planning"
+    },
+    "priority": {
+      "type": "string",
+      "enum": [
+        "low",
+        "medium",
+        "high"
+      ],
+      "default": "medium"
+    },
+    "start_date": {
+      "type": "string",
+      "format": "date"
+    },
+    "end_date": {
+      "type": "string",
+      "format": "date"
+    },
+    "assigned_employees": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "progress": {
+      "type": "number",
+      "default": 0
+    },
+    "budget": {
+      "type": "number"
+    },
+    "branch_id": {
+      "type": "string"
+    },
+    "branch_name": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "title",
+    "status"
+  ]
+}

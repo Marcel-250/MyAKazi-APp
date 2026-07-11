@@ -1,0 +1,45 @@
+{
+  "name": "Attendance",
+  "type": "object",
+  "properties": {
+    "employee_id": {
+      "type": "string"
+    },
+    "employee_name": {
+      "type": "string"
+    },
+    "date": {
+      "type": "string",
+      "format": "date"
+    },
+    "clock_in": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "clock_out": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "hours_worked": {
+      "type": "number"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "present",
+        "late",
+        "absent",
+        "half_day"
+      ],
+      "default": "present"
+    },
+    "notes": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "employee_name",
+    "date",
+    "status"
+  ]
+}

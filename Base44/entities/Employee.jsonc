@@ -1,0 +1,64 @@
+{
+  "name": "Employee",
+  "type": "object",
+  "properties": {
+    "full_name": {
+      "type": "string"
+    },
+    "email": {
+      "type": "string",
+      "format": "email"
+    },
+    "phone": {
+      "type": "string"
+    },
+    "position": {
+      "type": "string"
+    },
+    "department": {
+      "type": "string"
+    },
+    "branch_id": {
+      "type": "string"
+    },
+    "branch_name": {
+      "type": "string"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "pending",
+        "approved",
+        "rejected"
+      ],
+      "default": "pending"
+    },
+    "hire_date": {
+      "type": "string",
+      "format": "date"
+    },
+    "salary": {
+      "type": "number"
+    },
+    "profile_photo_url": {
+      "type": "string"
+    },
+    "bio": {
+      "type": "string"
+    },
+    "skills": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "address": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "full_name",
+    "email",
+    "position"
+  ]
+}

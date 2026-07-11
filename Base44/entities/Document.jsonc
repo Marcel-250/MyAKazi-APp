@@ -1,0 +1,45 @@
+{
+  "name": "Document",
+  "type": "object",
+  "properties": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "document_type": {
+      "type": "string",
+      "enum": [
+        "contract",
+        "receipt",
+        "invoice",
+        "report",
+        "other"
+      ],
+      "default": "other"
+    },
+    "file_url": {
+      "type": "string"
+    },
+    "attached_to_type": {
+      "type": "string"
+    },
+    "attached_to_id": {
+      "type": "string"
+    },
+    "tags": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "branch_id": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "title",
+    "document_type"
+  ]
+}

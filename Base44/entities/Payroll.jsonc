@@ -1,0 +1,55 @@
+{
+  "name": "Payroll",
+  "type": "object",
+  "properties": {
+    "employee_id": {
+      "type": "string"
+    },
+    "employee_name": {
+      "type": "string"
+    },
+    "month": {
+      "type": "string"
+    },
+    "base_salary": {
+      "type": "number"
+    },
+    "bonus": {
+      "type": "number",
+      "default": 0
+    },
+    "deductions": {
+      "type": "number",
+      "default": 0
+    },
+    "net_pay": {
+      "type": "number"
+    },
+    "currency": {
+      "type": "string",
+      "default": "RWF"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "draft",
+        "approved",
+        "paid"
+      ],
+      "default": "draft"
+    },
+    "payment_date": {
+      "type": "string",
+      "format": "date"
+    },
+    "notes": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "employee_name",
+    "month",
+    "base_salary",
+    "status"
+  ]
+}

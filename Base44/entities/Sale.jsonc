@@ -1,0 +1,108 @@
+{
+  "name": "Sale",
+  "type": "object",
+  "properties": {
+    "invoice_number": {
+      "type": "string"
+    },
+    "customer_name": {
+      "type": "string"
+    },
+    "customer_email": {
+      "type": "string"
+    },
+    "customer_phone": {
+      "type": "string"
+    },
+    "items": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "product_id": {
+            "type": "string"
+          },
+          "name": {
+            "type": "string"
+          },
+          "quantity": {
+            "type": "number"
+          },
+          "unit_price": {
+            "type": "number"
+          },
+          "discount": {
+            "type": "number"
+          }
+        }
+      }
+    },
+    "subtotal": {
+      "type": "number"
+    },
+    "discount_total": {
+      "type": "number"
+    },
+    "tax_amount": {
+      "type": "number"
+    },
+    "total_amount": {
+      "type": "number"
+    },
+    "amount_paid": {
+      "type": "number"
+    },
+    "balance_due": {
+      "type": "number"
+    },
+    "currency": {
+      "type": "string",
+      "default": "RWF"
+    },
+    "type": {
+      "type": "string",
+      "enum": [
+        "quote",
+        "invoice",
+        "receipt"
+      ],
+      "default": "quote"
+    },
+    "payment_status": {
+      "type": "string",
+      "enum": [
+        "unpaid",
+        "partial",
+        "paid",
+        "overdue"
+      ],
+      "default": "unpaid"
+    },
+    "payment_method": {
+      "type": "string"
+    },
+    "sale_date": {
+      "type": "string",
+      "format": "date"
+    },
+    "due_date": {
+      "type": "string",
+      "format": "date"
+    },
+    "branch_id": {
+      "type": "string"
+    },
+    "branch_name": {
+      "type": "string"
+    },
+    "notes": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "customer_name",
+    "total_amount",
+    "type",
+    "payment_status"
+  ]
+}

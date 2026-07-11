@@ -1,0 +1,51 @@
+{
+  "name": "SupplierInvoice",
+  "type": "object",
+  "properties": {
+    "invoice_number": {
+      "type": "string"
+    },
+    "supplier_id": {
+      "type": "string"
+    },
+    "supplier_name": {
+      "type": "string"
+    },
+    "invoice_date": {
+      "type": "string",
+      "format": "date"
+    },
+    "due_date": {
+      "type": "string",
+      "format": "date"
+    },
+    "amount": {
+      "type": "number"
+    },
+    "amount_paid": {
+      "type": "number"
+    },
+    "currency": {
+      "type": "string",
+      "default": "RWF"
+    },
+    "payment_status": {
+      "type": "string",
+      "enum": [
+        "unpaid",
+        "partial",
+        "paid",
+        "overdue"
+      ],
+      "default": "unpaid"
+    },
+    "branch_id": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "invoice_number",
+    "amount",
+    "payment_status"
+  ]
+}
